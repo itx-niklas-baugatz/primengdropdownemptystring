@@ -5459,6 +5459,13 @@ pretty-bytes@^5.3.0:
   resolved "https://nexus.itx.de/repository/npm-group/pretty-bytes/-/pretty-bytes-5.6.0.tgz#356256f643804773c82f64723fe78c92c62beaeb"
   integrity sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==
 
+primeng@^16.9.11-lts:
+  version "16.9.11-lts"
+  resolved "https://nexus.itx.de/repository/npm-group/primeng/-/primeng-16.9.11-lts.tgz#c399d27a98e6d25ff6634022105618deb1b4681f"
+  integrity sha512-IKP6wBBJt1Hrc8a91+vmTWpreAA0sElUMOc1t0ErdT3ECxZYmmwttNN2mHQVLNZWJQjNy8/F5soe7b2gqdhW5A==
+  dependencies:
+    tslib "^2.3.0"
+
 proc-log@^3.0.0:
   version "3.0.0"
   resolved "https://nexus.itx.de/repository/npm-group/proc-log/-/proc-log-3.0.0.tgz#fb05ef83ccd64fd7b20bbe9c8c1070fc08338dd8"
