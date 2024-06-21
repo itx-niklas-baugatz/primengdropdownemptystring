@@ -1,4 +1,7 @@
 <div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
-  <p-dropdown *ngIf="templates$ | async as templates" [autoDisplayFirst]="true" [options]="templates" [group]="true"></p-dropdown>
+  <p-dropdown *ngIf="templates$ | async as templates" [options]="templates" [(ngModel)]="selectedItem"></p-dropdown>
   <span>loaded: {{(templates$ | async)?.length}}</span>
+  <span>value: {{selectedItem | json}}</span>
+  <button (click)="onValSetButton('')">Set Val 3 (empty string)</button>
+  <button (click)="onValSetButton('2')">Set Val 2</button>
 </div>
