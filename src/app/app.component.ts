@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { SelectItemGroup } from 'primeng/api';
+import { SelectItem, SelectItemGroup } from 'primeng/api';
 
 interface City {
   name: string;
@@ -14,31 +14,32 @@ interface City {
 export class AppComponent implements OnInit {
 
   public templates$: Observable<any[]|undefined>;
-  private readonly templatesSubject: BehaviorSubject<SelectItemGroup[]> = new BehaviorSubject<SelectItemGroup[]>([]);
+  private readonly templatesSubject: BehaviorSubject<SelectItem[]> = new BehaviorSubject<SelectItem[]>([]);
+  public selectedItem: string|null = '';
 
   public constructor()
   {
     this.templates$ = this.templatesSubject.asObservable();
   }
 
+  public onValSetButton(val: string)
+  {
+    this.selectedItem = val;
+  }
+
   ngOnInit() {
     setTimeout(() => {
       this.templatesSubject.next([
         {
-          label: 'Group 1', value: '1', items: [
-            { label: 'Item 1.1', value: '1.1' },
-            { label: 'Item 1.2', value: '1.2' },
-            { label: 'Item 1.3', value: '1.3' }
-          ]
+          label: 'Val 3', value: '',
         },
         {
-          label: 'Group 2', value: '2', items: [
-            { label: 'Item 2.1', value: '2.1' },
-            { label: 'Item 2.2', value: '2.2' },
-            { label: 'Item 2.3', value: '2.3' }
-          ]
-        }
+          label: 'Val 1', value: '1',
+        },
+        {
+          label: 'Val 2', value: '2',
+        },
       ]);
-    }, 3000);
+    }, 1);
   }
 }
